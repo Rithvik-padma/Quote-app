@@ -7,7 +7,7 @@ function App() {
 
   let getQuote = async () =>{
     let response = await fetch('https://api.adviceslip.com/advice').then((response=> response.json()));
-    setQuote(response.slip.advice);
+    setQuote(response.slip.advice.toString());
     console.log("Click button");
   }
 
