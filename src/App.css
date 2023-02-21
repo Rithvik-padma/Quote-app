@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Mynerve&family=Shantell+Sans:ital,wght@0,300;0,400;1,300&display=swap');
+
+html, body{
+  width: 100%;
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.4)), url(./images/skyhills.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.App-link {
-  color: #61dafb;
+.card{
+  width: 650px;
+  background-color: white;
+  text-align: center;
+  padding: 16px 32px 32px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 0 1px 0.1px black;
+  background-color: whitesmoke;
 }
 
-@keyframes App-logo-spin {
-  from {
+.quote{
+  font-family: 'Shantell Sans', sans-serif;
+  font-weight: 600;
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+
+button{
+  margin: 4px 13px;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-width: 2px;
+  border-radius: 50px;
+  background-color: white;
+  font-family: 'Shantell Sans', sans-serif;
+}
+
+button:hover{
+  animation: shake 0.5s both;
+  cursor: pointer;
+}
+
+button:hover a :is(span, .icon){
+  animation: textshake 0.8s both;
+}
+
+@keyframes shake {
+  0% {
     transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+  25% {
+    transform: rotate(3deg);
   }
+  50% {
+    transform: rotate(-3deg);
+  }
+  75% {
+    transform: rotate(1deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes textshake{
+  0%{
+    transform: translateX(2px);
+  }
+  25%{
+    transform: translateX(-2px);
+  }
+  50%{
+    transform: translateX(1px);
+  }
+  75%{
+    transform: translateX(-1px);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+.tweet{
+  color: #1DA1F2;
+  border:solid 2px #1DA1F2;
+}
+
+.icon{
+  margin-right: 7px;
+  width: 1rem;
 }
