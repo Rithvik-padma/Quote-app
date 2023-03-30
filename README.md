@@ -1,3 +1,8 @@
+# Quote app
+
+This project is a quote app using which you can get free advices and quotes - made using React and adviceslip API. 
+To use the project in your local system follow the steps given below.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
